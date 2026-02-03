@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>上岸的鱼 | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="lang-toggle" id="lang-toggle">EN</button>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <img src="images/logo.png" alt="Logo" class="hero-logo" />
+        <h1 class="hero-title">
+          <span class="lang-zh">上岸的鱼</span>
+          <span class="lang-en" style="display: none">Runking</span>
+        </h1>
+        <p class="hero-tagline">
+          <span class="lang-zh">游戏策划 · 独立开发者 · macOS/iOS · UE5</span>
+          <span class="lang-en" style="display: none"
+            >Game Designer · Indie Developer · macOS/iOS · UE5</span
+          >
+        </p>
+        <p class="hero-intro">
+          <span class="lang-zh"
+            >热爱创造工具与游戏，在设计与技术的交叉点寻找灵感。</span
+          >
+          <span class="lang-en" style="display: none"
+            >Passionate about creating tools and games, finding inspiration at
+            the intersection of design and technology.</span
+          >
+        </p>
+        <div class="hero-links">
+          <a href="#projects" class="hero-btn">
+            <span class="lang-zh">浏览作品</span>
+            <span class="lang-en" style="display: none">View Work</span>
+            ↓
+          </a>
+          <a href="#about" class="hero-btn secondary">
+            <span class="lang-zh">关于我</span>
+            <span class="lang-en" style="display: none">About Me</span>
+          </a>
+        </div>
+        <div class="scroll-hint">
+          <span class="lang-zh">向下滚动</span>
+          <span class="lang-en" style="display: none">Scroll Down</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <h2 class="section-title">
+        <span class="lang-zh">精选项目</span>
+        <span class="lang-en" style="display: none">Selected Projects</span>
+      </h2>
+
+      <div class="category-tabs">
+        <button class="tab-btn active" data-category="all">All</button>
+        <button class="tab-btn" data-category="mac">macOS</button>
+        <button class="tab-btn" data-category="ios">iOS</button>
+        <button class="tab-btn" data-category="tools">Tools</button>
+        <button class="tab-btn" data-category="plugins">Plugins</button>
+        <button class="tab-btn" data-category="games">Games</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Aion - Active -->
+        <article class="project-card featured" data-category="mac">
+          <div class="card-badge active">
+            <span class="lang-zh">全力开发</span>
+            <span class="lang-en" style="display: none">Active Dev</span>
+          </div>
+          <div class="card-icon">
+            <img src="images/projects/aion.png" alt="Aion Icon" />
+          </div>
+          <h3>Aion</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >新一代 macOS 进程管理工具，基于 Swift/SwiftUI
+              构建。提供直观的进程监控、智能资源分析与一键优化功能。</span
+            >
+            <span class="lang-en" style="display: none"
+              >Next-gen macOS process manager built with Swift/SwiftUI. Features
+              intuitive process monitoring, smart resource analysis, and
+              one-click optimization.</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">macOS</span>
+            <span class="tag">SwiftUI</span>
+            <span class="tag">AppKit</span>
+          </div>
+          <a href="https://aion.7caifei.com" target="_blank" class="card-link">
+            <span class="lang-zh">官网</span>
+            <span class="lang-en" style="display: none">Website</span>
+            →
+          </a>
+        </article>
+
+        <!-- BiYou - Maintenance -->
+        <article class="project-card" data-category="tools">
+          <div class="card-badge maint">
+            <span class="lang-zh">后期维护</span>
+            <span class="lang-en" style="display: none">Maintenance</span>
+          </div>
+          <div class="card-icon">💰</div>
+          <h3>BiYou</h3>
+          <p class="card-desc">
+            <span class="lang-zh">视频封面处理、标题优化、内容介绍优化</span>
+            <span class="lang-en" style="display: none"
+              >Video cover processing, title optimization, and content
+              description optimization</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bilibili</span>
+          </div>
+        </article>
+
+        <!-- Mac Message Backup - Maintenance -->
+        <article class="project-card" data-category="mac">
+          <div class="card-badge maint">
+            <span class="lang-zh">后期维护</span>
+            <span class="lang-en" style="display: none">Maintenance</span>
+          </div>
+          <div class="card-icon"><img src="images/projects/mmb.png" alt="Mac Message Backup Icon"></div>
+          <h3>Mac Message Backup</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >Mac 信息与通话记录备份工具，支持同步至 Gmail 与本地日历</span
+            >
+            <span class="lang-en" style="display: none"
+              >Mac message and call log backup tool, supports syncing to Gmail
+              and local calendar</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">macOS</span>
+            <span class="tag">Backup</span>
+          </div>
+          <a
+            href="https://github.com/monkey-sking/MacMessageBackupApp"
+            target="_blank"
+            class="card-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </article>
+
+        <!-- Wechatsync - Active (WIP) -->
+        <article class="project-card" data-category="plugins">
+          <div class="card-badge active">
+            <span class="lang-zh">全力开发</span>
+            <span class="lang-en" style="display: none">Active Dev</span>
+          </div>
+          <div class="card-icon">
+            <img src="images/projects/wechatsync.png" alt="Wechatsync Icon" />
+          </div>
+          <h3>Wechatsync (Enhanced)</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >公众号同步助手功能增强（开发中）：AI 接入、功能优化</span
+            >
+            <span class="lang-en" style="display: none"
+              >Contributing to Wechatsync: Adding AI integration & features
+              (Work in Progress)</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">Chrome Extension</span>
+            <span class="tag">TypeScript</span>
+          </div>
+        </article>
+
+        <!-- TextGenie - Maintenance -->
+        <article class="project-card" data-category="plugins">
+          <div class="card-badge maint">
+            <span class="lang-zh">后期维护</span>
+            <span class="lang-en" style="display: none">Maintenance</span>
+          </div>
+          <div class="card-icon">
+            <img src="images/projects/textgenie.svg" alt="TextGenie Icon" />
+          </div>
+          <h3>TextGenie</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >PopClip 多功能扩展：翻译、货币转换、终端命令、路径识别</span
+            >
+            <span class="lang-en" style="display: none"
+              >PopClip extension: translation, currency conversion, terminal
+              commands, path recognition</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">PopClip</span>
+          </div>
+          <a
+            href="https://github.com/monkey-sking/TextGenie"
+            target="_blank"
+            class="card-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </article>
+
+        <!-- Aiinone Studio - WIP/Early -->
+        <article class="project-card" data-category="tools">
+          <div class="card-badge wip">
+            <span class="lang-zh">开发中</span>
+            <span class="lang-en" style="display: none">WIP</span>
+          </div>
+          <div class="card-icon">🔄</div>
+          <h3>Aiinone Studio</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >可视化工作流自动化平台，拖拽式编排、可复用函数、定时任务</span
+            >
+            <span class="lang-en" style="display: none"
+              >Visual workflow automation platform with drag-drop editor,
+              reusable functions, scheduling</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">React Flow</span>
+          </div>
+        </article>
+
+        <!-- Survival Game Course - Completed -->
+        <article class="project-card" data-category="games">
+          <div class="card-badge done">
+            <span class="lang-zh">已完结</span>
+            <span class="lang-en" style="display: none">Completed</span>
+          </div>
+          <div class="card-icon">🎮</div>
+          <h3>Survival Game Course</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >UE5 多人在线生存游戏开发系列，22 章完整教程</span
+            >
+            <span class="lang-en" style="display: none"
+              >UE5 multiplayer survival game development series, 22 complete
+              chapters</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5</span>
+            <span class="tag">Blueprint</span>
+            <span class="tag">Multiplayer</span>
+          </div>
+          <a
+            href="https://blog.7caifei.com/2025/08/3aaab7e908ee.html"
+            target="_blank"
+            class="card-link"
+          >
+            <span class="lang-zh">查看详情</span>
+            <span class="lang-en" style="display: none">View Details</span>
+            →
+          </a>
+        </article>
+
+        <!-- Warp Optimizer - Completed -->
+        <article class="project-card" data-category="tools">
+          <div class="card-icon">🌐</div>
+          <h3>Warp Optimizer</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >Cloudflare WARP IP 优选工具，自动导出 Clash/Loon/WireGuard
+              配置</span
+            >
+            <span class="lang-en" style="display: none"
+              >Cloudflare WARP IP optimizer, auto-export configs for
+              Clash/Loon/WireGuard</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Shell</span>
+          </div>
+        </article>
+
+        <!-- Daily Commit Summarizer - Completed -->
+        <article class="project-card" data-category="tools">
+          <div class="card-icon">📝</div>
+          <h3>Daily Commit Summarizer</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >AI 每日 Git 提交摘要生成器，支持递归扫描、Owner
+              过滤、离线模式</span
+            >
+            <span class="lang-en" style="display: none"
+              >AI daily Git commit summarizer with recursive scanning, owner
+              filtering, offline mode</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">OpenAI</span>
+          </div>
+          <a
+            href="https://github.com/monkey-sking/daily-commit-summarizer"
+            target="_blank"
+            class="card-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </article>
+
+        <!-- Fab Helper - Maintenance -->
+        <article class="project-card" data-category="plugins">
+          <div class="card-badge maint">
+            <span class="lang-zh">后期维护</span>
+            <span class="lang-en" style="display: none">Maintenance</span>
+          </div>
+          <div class="card-icon">🛒</div>
+          <h3>Fab Helper</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >Fab.com
+              免费资产一键自动入库助手，内置智能限速与多标签协同技术确保稳定性</span
+            >
+            <span class="lang-en" style="display: none"
+              >One-click auto-claim for Fab.com free assets, with smart rate
+              limiting & multi-tab coordination</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">Tampermonkey</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a
+            href="https://github.com/monkey-sking/FabHelperScript"
+            target="_blank"
+            class="card-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </article>
+
+        <!-- GMKC - Completed -->
+        <article class="project-card" data-category="plugins">
+          <div class="card-icon">🧹</div>
+          <h3>GMKC</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >Google MyActivity
+              智能清理脚本，深度上下文匹配、自动错误处理</span
+            >
+            <span class="lang-en" style="display: none"
+              >Google MyActivity cleaner with deep context matching and auto
+              error handling</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">Tampermonkey</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a
+            href="https://github.com/monkey-sking/GMKC"
+            target="_blank"
+            class="card-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </article>
+
+        <!-- Action Game (New) - WIP -->
+        <article class="project-card" data-category="games">
+          <div class="card-badge wip">
+            <span class="lang-zh">开发中</span>
+            <span class="lang-en" style="display: none">WIP</span>
+          </div>
+          <div class="card-icon">⚔️</div>
+          <h3>Action Game</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >UE5.7 动作游戏项目，ComboGraph 连招系统、StateTree AI</span
+            >
+            <span class="lang-en" style="display: none"
+              >UE5.7 action game with ComboGraph combo system and StateTree
+              AI</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5.7</span>
+            <span class="tag">ComboGraph</span>
+            <span class="tag">StateTree</span>
+          </div>
+        </article>
+
+        <!-- State Grid Helper (Deprecated) -->
+        <article class="project-card" data-category="ios">
+          <div class="card-badge archived">
+            <span class="lang-zh">已失效</span>
+            <span class="lang-en" style="display: none">Deprecated</span>
+          </div>
+          <div class="card-icon">⚡️</div>
+          <h3>State Grid Helper</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >基于 Scripting App 的 iOS
+              桌面小组件，实时查询电费余额与阶梯用电进度</span
+            >
+            <span class="lang-en" style="display: none"
+              >State Grid iOS Widget based on Scripting App, query electricity
+              balance and usage tiers</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Scripting App</span>
+            <span class="tag">iOS</span>
+          </div>
+          <a
+            href="https://github.com/monkey-sking/sgcc"
+            target="_blank"
+            class="card-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </article>
+
+        <!-- QEFC - Maintenance -->
+        <article class="project-card" data-category="games">
+          <div class="card-badge maint">
+            <span class="lang-zh">后期维护</span>
+            <span class="lang-en" style="display: none">Maintenance</span>
+          </div>
+          <div class="card-icon">
+            <img src="images/projects/qefc.png" alt="QEFC Icon" />
+          </div>
+          <h3>QuickEventFunctionCreator</h3>
+          <p class="card-desc">
+            <span class="lang-zh"
+              >UE5 蓝图效率插件，统一语法创建事件/函数，智能别名系统</span
+            >
+            <span class="lang-en" style="display: none"
+              >UE5 Blueprint efficiency plugin with unified syntax and smart
+              alias system</span
+            >
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5</span>
+            <span class="tag">C++</span>
+          </div>
+          <a
+            href="https://www.fab.com/zh-cn/listings/85e81b75-ee98-4d47-83e0-c6374dedf5ae"
+            target="_blank"
+            class="card-link"
+          >
+            <span class="lang-zh">查看详情</span>
+            <span class="lang-en" style="display: none">View Details</span>
+            →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2 class="section-title">
+        <span class="lang-zh">关于我</span>
+        <span class="lang-en" style="display: none">About Me</span>
+      </h2>
+      <div class="glass-card about-content">
+        <p class="about-text">
+          <span class="lang-zh">
+            我是一名<strong>游戏策划 (Game Designer)</strong
+            >，同时也是一名热爱代码的独立开发者。<br />
+            在职业生涯中，我专注于设计引人入胜的游戏玩法；在业余时间，我喜欢用
+            Swift、UE5 和 JavaScript 构建解决实际问题的工具。<br />
+            无论是打磨游戏机制，还是优化 macOS
+            工作流，我都致力于极致的用户体验。
+          </span>
+          <span class="lang-en" style="display: none">
+            I am a <strong>Game Designer</strong> by profession and an indie
+            developer by passion context.<br />
+            While I focus on designing engaging gameplay in my career, I love
+            building practical tools with Swift, UE5, and JavaScript in my spare
+            time.<br />
+            Whether polishing game mechanics or optimizing macOS workflows, I am
+            committed to the ultimate user experience.
+          </span>
+        </p>
+        <div class="tech-stack">
+          <div class="tech-tag">UE5 / C++ / Blueprint</div>
+          <div class="tech-tag">macOS / Swift / SwiftUI</div>
+          <div class="tech-tag">Web / Next.js / React</div>
+          <div class="tech-tag">Scripting / Python / JS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2026 Runking. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/monkey-sking" target="_blank">GitHub</a>
+          <a href="https://blog.7caifei.com" target="_blank">Blog</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
