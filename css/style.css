@@ -406,6 +406,12 @@ a {
     margin-bottom: 16px;
 }
 
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
 .tag {
     padding: 4px 12px;
     background: rgba(255, 255, 255, 0.1);
@@ -534,7 +540,7 @@ a {
         width: 120px;
         height: 120px;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
