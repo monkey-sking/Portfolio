@@ -198,13 +198,30 @@ a {
 }
 
 .scroll-hint {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     color: var(--text-muted);
     font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
     animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-hint:hover,
+.scroll-hint:focus-visible {
+    color: var(--text-primary);
+}
+
+.scroll-hint:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 8px;
+}
+
+.scroll-hint:hover .scroll-arrow,
+.scroll-hint:focus-visible .scroll-arrow {
+    border-color: var(--text-primary);
 }
 
 .scroll-arrow {
