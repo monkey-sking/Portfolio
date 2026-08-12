@@ -487,6 +487,14 @@ a {
     line-height: 1.8;
 }
 
+.tech-label {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+    margin-bottom: 14px;
+}
+
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
