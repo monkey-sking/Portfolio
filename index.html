@@ -9,34 +9,62 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Baidu Analytics -->
+    <!-- Analytics (Baidu / Microsoft Clarity / Google Analytics) -->
     <script>
-      var _hmt = _hmt || [];
       (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?93bcff367c4826e4d928e5344f979a63";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
+        // 仅在正式生产域名下加载统计脚本，过滤本地测试 (localhost / 127.0.0.1) 及预览/测试部署环境
+        var host = window.location.hostname;
+        var isProduction = host === 'i.7caifei.com' || host === 'www.i.7caifei.com';
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
+        // 准备好基础全局对象与空函数，避免非生产环境下调用 window.gtag / _hmt / clarity 报错
+        window.dataLayer = window.dataLayer || [];
+        if (!window.gtag) {
+          window.gtag = function() {
+            window.dataLayer.push(arguments);
+          };
+        }
+        window._hmt = window._hmt || [];
+        if (!window.clarity) {
+          window.clarity = function() {
+            (window.clarity.q = window.clarity.q || []).push(arguments);
+          };
+        }
+
+        if (!isProduction) {
+          return;
+        }
+
+        // 1. Google Analytics
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-PSHN5LZDQF');
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-PSHN5LZDQF';
+        document.head.appendChild(gaScript);
+
+        // 2. Baidu Analytics
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?93bcff367c4826e4d928e5344f979a63';
+        hm.defer = true;
+        var s = document.getElementsByTagName('script')[0];
+        if (s && s.parentNode) {
+          s.parentNode.insertBefore(hm, s);
+        } else {
+          document.head.appendChild(hm);
+        }
+
+        // 3. Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "vcknyuozk1");
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSHN5LZDQF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-PSHN5LZDQF');
+          y=l.getElementsByTagName(r)[0];
+          if (y && y.parentNode) {
+            y.parentNode.insertBefore(t,y);
+          } else {
+            document.head.appendChild(t);
+          }
+        })(window, document, 'clarity', 'script', 'vcknyuozk1');
+      })();
     </script>
   </head>
   <body>
@@ -52,28 +80,28 @@
           <span class="lang-en" style="display: none">Runking</span>
         </h1>
         <p class="hero-tagline">
-          <span class="lang-zh">游戏策划 · 独立开发者 · macOS/iOS · UE5</span>
+          <span class="lang-zh">游戏 AI 策划 · AI 应用产品人 · UE5 · macOS/iOS</span>
           <span class="lang-en" style="display: none"
-            >Game Designer · Indie Developer · macOS/iOS · UE5</span
+            >Game AI Designer · AI Product Builder · UE5 · macOS/iOS</span
           >
         </p>
         <p class="hero-intro">
           <span class="lang-zh"
-            >主做 macOS 工具与交互产品，最近聚焦 Aether 与 Aion：前者面向语音与头部控制工作流，后者专注智能进程管理与沉浸体验。</span
+            >15 年游戏研发与策划经验，能把玩法和 AI 能力拆成可执行、可验收的系统；同时独立交付过 macOS 产品从需求、客户端到付费上架的完整闭环。下面是 UE5 游戏 AI、AI 应用产品与研发工具的代表作品。</span
           >
           <span class="lang-en" style="display: none"
-            >I build macOS tools and interaction products, currently focused on Aether and Aion: one for voice and head-controlled workflows, the other for intelligent process management and immersive focus.</span
+            >15 years of game R&amp;D and design experience, turning gameplay and AI capabilities into executable, testable systems; also shipped a macOS product end-to-end, from requirements and client to paid distribution. Below are representative pieces in UE5 game AI, AI application products, and developer tooling.</span
           >
         </p>
         <div class="hero-links">
-          <a href="https://aether.7caifei.com" target="_blank" class="hero-btn">
-            <span class="lang-zh">查看 Aether</span>
-            <span class="lang-en" style="display: none">Explore Aether</span>
+          <a href="https://aion.7caifei.com" target="_blank" class="hero-btn">
+            <span class="lang-zh">已上架产品 Aion</span>
+            <span class="lang-en" style="display: none">Shipped: Aion</span>
             ↗
           </a>
-          <a href="https://aion.7caifei.com" target="_blank" class="hero-btn">
-            <span class="lang-zh">查看 Aion</span>
-            <span class="lang-en" style="display: none">Explore Aion</span>
+          <a href="https://aether.7caifei.com" target="_blank" class="hero-btn">
+            <span class="lang-zh">Aether 可下载构建</span>
+            <span class="lang-en" style="display: none">Aether Downloadable Build</span>
             ↗
           </a>
           <a href="#projects" class="hero-btn">
@@ -111,11 +139,11 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Aether - Latest Release -->
+        <!-- Aether - Downloadable build (release status unverified) -->
         <article class="project-card featured" data-category="mac">
-          <div class="card-badge">
-            <span class="lang-zh">最新上线</span>
-            <span class="lang-en" style="display: none">Latest Release</span>
+          <div class="card-badge active">
+            <span class="lang-zh">可下载构建</span>
+            <span class="lang-en" style="display: none">Downloadable Build</span>
           </div>
           <div class="card-icon">
             <img src="images/projects/aether.png" alt="Aether Icon" />
@@ -123,10 +151,10 @@
           <h3>Aether</h3>
           <p class="card-desc">
             <span class="lang-zh"
-              >Aether 是一款 macOS 原生语音交互应用，把语音输入、语音控制与 AirPods 头控指针整合到一起，让文本输入和桌面操作更少依赖键鼠。</span
+              >Aether 是一款 macOS 原生语音交互应用，把语音输入、语音控制与 AirPods 头控指针整合到一起，让文本输入和桌面操作更少依赖键鼠。官网提供可下载构建，正式版发布状态待核实。</span
             >
             <span class="lang-en" style="display: none"
-              >Aether is a native macOS voice interaction app that combines dictation, voice control, and AirPods head-tracked cursor input to make desktop work less dependent on keyboard and mouse.</span
+              >Aether is a native macOS voice interaction app that combines dictation, voice control, and AirPods head-tracked cursor input to make desktop work less dependent on keyboard and mouse. A downloadable build is available from the website; formal release status is unverified.</span
             >
           </p>
           <div class="card-tags">
@@ -148,11 +176,11 @@
           </div>
         </article>
 
-        <!-- Aion - Maintenance -->
-        <article class="project-card" data-category="mac">
-          <div class="card-badge maint">
-            <span class="lang-zh">更新维护</span>
-            <span class="lang-en" style="display: none">Maintenance</span>
+        <!-- Aion - Available on Setapp (2026-09-29) -->
+        <article class="project-card featured" data-category="mac">
+          <div class="card-badge done">
+            <span class="lang-zh">已上架 Setapp</span>
+            <span class="lang-en" style="display: none">Available on Setapp</span>
           </div>
           <div class="card-icon">
             <img src="images/projects/aion.png" alt="Aion Icon" />
@@ -971,22 +999,22 @@
       <div class="glass-card about-content">
         <p class="about-text">
           <span class="lang-zh">
-            我是一名<strong>游戏策划</strong>，也是一名靠 AI 辅助（vibe coding）把想法做成产品的<strong>产品人</strong>。<br />
-            我真正擅长的是产品逻辑与体验设计——想清楚一个东西要解决什么问题、怎么用才顺手；至于写代码，我交给
-            AI，自己负责把需求讲明白、把方向把稳。<br />
-            从 macOS 工具、iOS/手表应用，到 Web 产品与游戏玩法，作品横跨多个平台，但底色始终是：懂逻辑、重体验、能交付。
+            我是一名<strong>游戏 AI 策划</strong>，也是一名能独立交付的<strong>AI 应用产品人</strong>：既做过 3A TPS 的敌人与战斗 AI、行为树和状态机，也独自跑通过 macOS 工具从需求、客户端、后端到付费上架的完整闭环。<br />
+            在 AI 时代，我的价值不是“会写代码”，而是把不确定的 AI 能力拆成<strong>可定义、可验收、可协作</strong>的产品与系统：想清楚解决什么问题、边界在哪里、怎么和程序美术一起落地。<br />
+            作品横跨 UE5 游戏 AI、macOS/iOS 产品与研发工具，底色始终是：懂逻辑、重体验、能交付。
           </span>
           <span class="lang-en" style="display: none">
-            I'm a <strong>game designer</strong> and a product-minded builder who
-            turns ideas into shipped products with AI assistance (vibe
-            coding).<br />
-            What I'm really good at is product logic and experience design —
-            getting clear on what a tool should solve and how it should feel. The
-            coding is handled by AI; I own the requirements and keep the
-            direction on track.<br />
-            From macOS utilities and iOS/watch apps to web products and game
-            design, my work spans many platforms, but the thread is constant:
-            clear logic, great UX, real delivery.
+            I'm a <strong>game AI designer</strong> and an independently
+            shipping <strong>AI product builder</strong>: I've built enemy and
+            combat AI with behavior trees and state machines for a 3A TPS, and I
+            also took a macOS utility end-to-end — requirements, client, backend,
+            and paid distribution — on my own.<br />
+            In the AI era my value isn't "I can code"; it's turning uncertain AI
+            capabilities into <strong>definable, testable, collaboratable</strong>
+            systems: knowing what problem to solve, where the boundaries are, and
+            how to land it with programmers and artists.<br />
+            My work spans UE5 game AI, macOS/iOS products, and developer tooling,
+            with a constant thread: clear logic, great UX, real delivery.
           </span>
         </p>
         <p class="tech-label">
