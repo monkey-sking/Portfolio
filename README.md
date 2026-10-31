@@ -1,7 +1,7 @@
 # Portfolio Website
 
 <!-- badges:start -->
-[![Stars](https://img.shields.io/github/stars/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/stargazers) [![Forks](https://img.shields.io/github/forks/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/network/members) [![Last commit](https://img.shields.io/github/last-commit/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/commits/main)
+[![Stars](https://img.shields.io/github/stars/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/stargazers) [![Forks](https://img.shields.io/github/forks/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/network/members) [![Last commit](https://img.shields.io/github/last-commit/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/commits/main) [![License](https://img.shields.io/github/license/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/blob/main/LICENSE) [![Language](https://img.shields.io/github/languages/top/monkey-sking/Portfolio?style=flat-square)](https://github.com/monkey-sking/Portfolio/search?l=)
 <!-- badges:end -->
 
 上岸的鱼 · Fish Ashore 个人作品集网站
